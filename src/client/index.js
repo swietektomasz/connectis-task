@@ -1,7 +1,9 @@
-const SERVER_URL = "http://localhost:3000";
+import * as data from "@/assets/db.json";
+
+const returnWithTimeout = (delay) =>
+  new Promise((resolve) => setTimeout(resolve, delay));
 
 export const getClients = async () => {
-  const response = await fetch(`${SERVER_URL}/transactions`);
-  const data = await response.json();
-  return data;
+  await returnWithTimeout(1000);
+  return data.transactions;
 };

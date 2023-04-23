@@ -1,0 +1,2 @@
+export const LOWER_POINT_THRESHOLD = 50;
+export const UPPER_POINT_THRESHOLD = 100;
